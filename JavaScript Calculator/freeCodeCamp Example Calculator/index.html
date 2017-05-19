@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Twitchtv Twitch">
+
+    <title>JavaScript Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="js/myscript.js"></script>
+</head>
+
+<body>
+
+<div class = "text-center">
+  <h1> JavaScript Calculator</h1>
+</div>
+
+<div class='container'>
+  <div id='calculator'>
+
+    <!-- TITLE -->
+
+    <div id='title' class='text-center'>
+      <h5><b>ELECTRONIC CALCULATOR</b></h5>
+    </div>
+
+    <!-- ENTRY BOX -->
+
+    <div id='entrybox' class='text-right'>
+      <div id='entry'>
+        <p id='answer'>0</p>
+      </div>
+      <div id='history'>
+        <p>0</p>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div id='buttons'>
+
+      <button class='red' value='ac'>AC</button>
+      <button class='red' value='ce'>CE</button>
+      <button value='/'>&divide;</button>
+      <button value='*'>x</button>
+
+      <button value='7'>7</button>
+      <button value='8'>8</button>
+      <button value='9'>9</button>
+      <button value='-'>-</button>
+
+      <button value='4'>4</button>
+      <button value='5'>5</button>
+      <button value='6'>6</button>
+      <button value='+'>+</button>
+
+
+      <button value='1'>1</button>
+      <button value='2'>2</button>
+      <button value='3'>3</button>
+      <button class='invisible'>N</button>
+
+      <button id='zeroButton' value='0'>0</button>
+      <button value='.'>.</button>
+      <button id='equalButton' value='='>=</button>
+
+    </div>
+    <!-- end buttons -->
+    <div id='tester'></div>
+  </div>
+  <!-- end calculator -->
+</div>
+<!-- end container -->
+
+<footer id="footer" class="text-center">
+  <div class="container">
+    Designed & Coded by
+    <a href="https://www.linkedin.com/in/justin-woodward-891772118" target="_blank">
+        Justin Woodward</a>
+  </div>
+</footer>
+</body>
+</html>
