@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Pomodoro Clock">
+
+    <title>Pomodoro Clock</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Add bootstrap styles -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<div class='container'>
+
+    <!-- Clock Title -->
+    <div id='title' class='text-center'>
+      <h1><b>Pomodoro Clock</b></h5>
+    </div>
+
+    <div id='timer-settings'>
+      <div class="row">
+        <div class ="col-sm-12">
+          <div class="col-sm-4">
+             <span class="button-heading">Break Length</span>
+             <p>
+               <button id = "break-minus">
+                 <i   class="fa fa-minus"></i>
+               </button>
+               <span id = "break-time" class ="time">5</span>
+               <button id = "break-plus" >
+                 <i class="fa fa-plus"></i>
+               </button>
+             </p>
+          </div>
+
+          <div class="col-sm-2">
+            <button class="ctrl-start btn btn-success btn-lg">Start</button>
+          </div>
+          <div class="col-sm-2">
+            <button class="ctrl-reset btn btn-success btn-lg">Reset</button>
+          </div>
+
+          <div class="col-sm-4">
+             <span class="button-heading">Session Length</span>
+             <p>
+               <button id = "session-minus">
+                 <i class="fa fa-minus"></i>
+               </button>
+               <span id = "session-time" class ="time">25</span>
+               <button id = "session-plus">
+                <i class="fa fa-plus"></i>
+              </button>
+            </p>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id='pomodoro-clock'>
+    <div class="middle">
+      <div class="inner">
+        </br></br></br></br></br>
+        <span id="clock-text">Session</span>
+        </br>
+        <span id="clock-time">25:00</span>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- end calculator -->
+</div>
+<!-- end container -->
+
+<footer id="footer" class="text-center">
+  <div class="container">
+    Designed by:
+    <a href="https://www.linkedin.com/in/nabeel-hussain-9912a152/" target="_blank">
+        Nabeel Hussain</a>
+  </div>
+</footer>
+
+</body>
+</html>
