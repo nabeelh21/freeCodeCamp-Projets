@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Machine</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Add font-awesome styles -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/myscript.js" type='text/javascript'></script>
+</head>
+
+<body>
+  <div class= "container-fluid">
+    <div class = "row header">
+      <h1><strong> Random Quote Machine</strong></h1>
+    </div>
+    <div class = "row buttons">
+      <div class = "col-sm-12">
+        <ul class="list-inline">
+            <li>
+                <button class="btn btn-default btn-lg" id = "tweetQuote"><i class="fa fa-twitter fa-fw "></i></button>
+            </li>
+            <li>
+                <button class="btn btn-default btn-lg " id = "getQuote">Get Quote</button>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class = "well">
+      <div class ="row">
+        <div class = "col-lg-12">
+        <i class="fa fa-quote-left fa-2x"> </i>
+        <span id="quote"></span>
+        </div>
+     </div>
+   </div>
+     <div class = "footer">
+       API used from <a href = "http://quotes.stormconsultancy.co.uk/api" target="_blank"> Storm Consultancy</a><br>
+       &copy; Nabeel Hussain
+    </div>
+  </div>
+</body>
+</html>

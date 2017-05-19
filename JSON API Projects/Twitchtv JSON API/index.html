@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Twitchtv Twitch">
+
+    <title>Twitchtv Streamers</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Add font-awesome styles -->
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="js/myscript.js"></script>
+</head>
+
+<body>
+  <div class = "container-fluid">
+    <h1 class = "title"> Twitch.tv Streamers</h1>
+
+    <div class= "row" >
+      <div class="menu">
+        <div class="selector active" id="all">
+          All
+        </div>
+        <div class="selector" id="online">
+          Online
+        </div>
+        <div class="selector" id="offline">
+          Offline
+        </div>
+      </div>
+    </div>
+
+    <div class = "row">
+      <form class = "form" action = "">
+        <input type="text" id="search-text" placeholder="Search" autocomplete="on" spellcheck="true"/>
+      </form>
+    </div>
+
+    <div class ="row">
+      <div id = "display"> </div>
+    </div>
+
+
+  </div>
+</body>
+</html>

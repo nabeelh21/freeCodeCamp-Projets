@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a Local Weather App">
+    <meta name="keywords" content="local weather, weather, temperature">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Local Weather</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Add font-awesome styles -->
+    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/myscript.js" type='text/javascript'></script>
+</head>
+
+<body>
+  <div class= "container-fluid">
+    <div class = "row header">
+      <h1> Local Weather App</h1>
+    </div>
+    <div class = "row weather-degrees">
+        <div id = "icon"></div>
+        <div id = "temp"></div>
+    </div>
+    <div class ="row weather-info">
+      <div id = "location" class = "panel-box"></div>
+      <div id = "condition" class = "panel-box"></div>
+   </div>
+     <div class = "footer">
+       API used from <a href = "https://openweathermap.org/api" target="_blank"> OpenWeatherMap</a><br>
+       &copy; Nabeel Hussain
+    </div>
+  </div>
+</body>
+</html>

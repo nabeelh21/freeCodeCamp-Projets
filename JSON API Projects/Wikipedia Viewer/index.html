@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content=" Wikipedia search results viewer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="wikipedia, wikipedia viewer">
+
+    <title>Nabeel Hussain - Personal Page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/css/topcoat-desktop-light.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Add font-awesome styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/myscript.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1>Wikipedia Viewer</h1>
+    <p class = "sub-header">Search for relevant entries from the Wikipedia database.</p>
+    <form class = "form" action = "">
+      <input type="text" id="search-text" placeholder="Search Wikipedia" autocomplete="off" spellcheck="true"/>
+      <i class="fa fa-search fa-lg"></i><span class="verticleLine"></span>
+      <i class="fa fa-times-circle fa-lg"></i>
+    </form>
+    <p class = "click-icon">Click icon or press enter to search</a></p>
+    <p class = "random-article"><a href = "https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article.</a></p>
+
+    <div id = "container-fluid">
+      <span class = "search-results"></span>
+    </div>
+  </div>
+</body>
+</html>
