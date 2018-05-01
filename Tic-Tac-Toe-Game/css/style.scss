@@ -1,0 +1,327 @@
+@mixin gameboard-background() {
+ background: rgba(40,40,40,1)
+-webkit-radial-gradient(center, rgba(0, 89, 94,1), rgba(0,20,20,.6));
+ background: rgba(40,40,40,1)
+   -moz-radial-gradient(center, rgba(0, 89, 94,1), rgba(0,20,20,.6));
+ background: rgba(40,40,40,1)
+   -ms-radial-gradient(center, rgba(0, 89, 94,1), rgba(0,20,20,.6));
+ background: rgba(40,40,40,1)
+   radial-gradient(center, rgba(0, 89, 94,1), rgba(0,20,20,.6));
+}
+
+
+body {
+ width: 100%;
+ height: 100%;
+ background-color: #DBFFEA;
+}
+
+#title h1{
+ margin-top: 40px;
+ font-family: 'Montserrat Subrayada', sans-serif;
+ font-size: 60px;
+ color:rgba(0, 89, 94,1);
+ text-shadow: 2px 2px rgba(241, 139, 79,1);
+}
+
+#name {
+ font-family: 'Architects Daughter', Helvetica, sans-serif;
+ position: relative;
+ font-size: 18px;
+ font-weight: bold;
+ margin-top: 10px;
+ width: 100%;
+ height: 40px;
+
+ button,
+ button:hover,
+ button:active,
+ button:visited {
+   text-decoration: none !important;
+   outline: none !important;
+ }
+
+ a,
+ a:hover,
+ a:active,
+ a:visited {
+   color: rgba(241, 139, 79,1);
+   text-decoration: none !important;
+   outline: none !important;
+ }
+}
+
+li {
+ list-style: none;
+}
+
+.outer-container {
+ background: rgba(241, 139, 79,1);
+ box-shadow: inset -1px 1px 7px rgba(0,0,0,.2), inset 1px -1px 7px rgba(0,0,0,.2), 1px 12px 5px rgba(0,0,0,.4), 4px 3px 8px rgba(0,0,0,.4), 5px 10px 10px rgba(0,0,0,.2), -5px 10px 10px rgba(0,0,0,.4);
+ position: relative;
+ width: 430px;
+ height: 430px;
+ margin-left: auto;
+ margin-right: auto;
+ padding: 40px 0 0;
+}
+
+
+.board-container {
+ @include gameboard-background();
+ width: 380px;
+ height: 350px;
+ background-size: cover;
+ position: relative;
+ margin: 0 auto;
+ overflow: hidden;
+}
+
+.game-board {
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+ position: relative;
+}
+
+.boxes {
+ padding: 0;
+ width: 100%;
+ height: 100%;
+ position: relative;
+ text-align: center;
+ margin-top: 13.5px;
+ display: none;
+
+ li {
+   width: 30%;
+   height: 30%;
+   display: inline-block;
+   position: relative;
+   z-index: 1000;
+   overflow: hidden;
+
+   i {
+     font-size: 6.5rem;
+     text-align: center;
+     display: block;
+     width: 100%;
+     height: 100%;
+     font-style: normal;
+     font-family: "Architects Daughter", "Helvetica", "sans-serif";
+     color: rgba(220,220,220,.7);
+     z-index: 500;
+   }
+ }
+
+ .box1,.box2,.box3,
+ .box4,.box5,.box6,
+ .box7,.box8,.box9 {
+   border-style: solid;
+   border-width: thick;
+   border-color: #57ABAA;
+ }
+}
+
+/* Canvas Drawing */
+
+#myCanvas {
+ width: 330px;
+ height: 330px;
+ position: absolute;
+ z-index: 0;
+ left: 10px;
+ top: 0;
+ opacity: 0;
+}
+
+/* Player/Computer prompt */
+
+.container-turn{
+ font-family: "Architects Daughter", "Helvetica", "sans-serif";
+ text-align: center;
+ font-size: 2.5rem;
+ font-weight: bold;
+
+ .player-turn {
+   display: inline-block;
+   margin-top: 30px;
+   font-weight: bold;
+
+   span{
+     font-size: 2.5rem;
+     font-weight: bold;
+     color: rgba(241, 139, 79,1);
+   }
+ }
+}
+
+
+
+/* Score keeping */
+.container-scores
+{
+ text-align: center;
+}
+
+.score-1,
+.score-2 {
+ font-family: 'Architects Daughter', sans-serif;
+ color: black;
+ display: inline-block;
+ font-size: 1.7rem;
+ padding: 15px;
+ font-weight: bold;
+
+ .points {
+   font-weight: bold;
+   color: black;
+   font-family: 'Architects Daughter', sans-serif;
+ }
+}
+
+
+/* reset button */
+.hard-reset {
+ background: none;
+ border: none;
+ font-family: 'Architects Daughter', sans-serif;
+ color: black;
+ font-size: 1.8rem;
+ border-radius: 20px;
+ border: 2px dashed transparent;
+ display: none;
+ margin-left: 50px;
+ font-weight: bold;
+
+ hover {
+   border: 2px dashed rgba(0,0,0,1);
+   color: black;
+ }
+
+ focus {
+   outline: none;
+ }
+}
+
+
+/* Result Feedback */
+span.rotate {
+ color: rgba(0,200,200,1);
+}
+
+i.win {
+ background: black;
+}
+
+.message-container{
+ font-family: 'Architects Daughter', sans-serif;
+ background: rgba(0,0,0,.8);
+ width: 400px;
+ height: 400px;
+ position: absolute;
+ z-index: 2000;
+ display: none;
+ box-sizing: border-box;
+ text-align: center;
+ font-size: 2.3rem;
+ color: white;
+
+ .draw-message,
+ .lose-message,
+ .win-message {
+   display: none;
+   margin-top: 80px;
+
+   p {
+     color: white;
+     text-align: center;
+     font-family: 'Architects Daughter', sans-serif;
+   }
+ }
+
+ .playAgain-message button {
+   background: none;
+   border: none;
+   opacity: .6;
+   border-radius: 20px;
+   border: 2px solid transparent;
+   font-size: 2.3rem;
+
+   button:hover{
+     opacity: 1;
+     border: 2px dashed rgba(230,230,230,1);
+   }
+
+   button:focus{
+     outline: none;
+   }
+ }
+}
+
+
+
+/*============================================
+         Game Starter
+============================================*/
+
+.game-choice,
+.game-starter {
+ display: block;
+ width: 100%;
+ position: absolute;
+ text-align: center;
+ font-family: 'Architects Daughter', Helvetica, sans-serif;
+ z-index: 1500;
+ /*  display: none;*/
+
+ button, p {
+   color: rgba(220,220,220,1);
+   position: relative;
+   top: 50px;
+   margin: 10px auto;
+ }
+
+ p{
+   font-size: 3rem;
+   max-width: 80%;
+ }
+
+ button{
+   background: none;
+   border: none;
+   opacity: .6;
+   border-radius: 20px;
+   border: 2px solid transparent;
+   font-size: 2.3rem;
+ }
+
+ button:focus {
+   outline: none;
+ }
+
+ button:hover {
+   opacity: 1;
+   border: 2px dashed rgba(230,230,230,1);
+ }
+}
+
+.game-starter {
+ display: none;
+
+ button.back-button  {
+   position: absolute;
+   top: 270px;
+   right: 158px;
+   font-size: 1.7rem;
+   border: none;
+ }
+ .back-button:hover {
+   border: none;
+ }
+
+}
+
+button {
+ cursor: pointer;
+}

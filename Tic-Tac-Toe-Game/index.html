@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Tic Tac Toe">
+
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!-- Add bootstrap styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Add bootstrap styles -->
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Add jQuery library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- Add bootsrap library -->
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Title -->
+  <div id='title' class='text-center'>
+    <h1><b>Tic Tac Toe</b></h5>
+  </div>
+  <div id="name" class="text-center">
+    <div class="container">
+      Designed by
+      <a href="https://www.linkedin.com/in/nabeel-hussain-9912a152/" target="_blank">
+          Nabeel Hussain</a>
+    </div>
+  </div>
+
+  <div class = "container-turn">
+  <div class="player-turn">Turn:</div>
+</div>
+
+  <div class=" outer-container">
+    <div class="board-container">
+      <div class="game-choice">
+        <p class = "numPlayers-question">How do you want to play?</p>
+        <button class="one-player">One Player</button>
+        <button class="two-player">Two Player</button>
+      </div>
+      <div class="game-starter">
+          <p class = "choice-question">Would you like to be X or O?</p>
+          <button class="choose-x">X</button>
+          <button class="choose-o">O</button>
+          <button class="back-button"><i class="fa fa-arrow-left"></i> Back</button>
+        </div>
+      <div class="game-board">
+
+      <div class=" message-container">
+        <div class="draw-message">
+          <p>It was a draw...</p>
+        </div>
+        <div class="lose-message">
+          <p>Uh oh, you lost...</p>
+        </div>
+        <div class="win-message">
+          <p>You Won!!! :)</p>
+        </div>
+        <div class="playAgain-message">
+          <button>Play Again</button>
+        </div>
+      </div>
+
+        <ul class="boxes">
+          <li><i class="box1"><span></span></i></li>
+          <li><i class="box2"><span></span></i></li>
+          <li><i class="box3"><span></span></i></li>
+          <li><i class="box4"><span></span></i></li>
+          <li><i class="box5"><span></span></i></li>
+          <li><i class="box6"><span></span></i></li>
+          <li><i class="box7"><span></span></i></li>
+          <li><i class="box8"><span></span></i></li>
+          <li><i class="box9"><span></span></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class = "container-scores">
+    <p class="score-1">
+      <span class="points"></span>
+    <br/>
+      <span class="name"></span>
+    </p>
+
+    <p class="score-2">
+      <span class="points"></span>
+    <br/>
+      <span class="name"></span>
+    </p>
+
+   <button class="hard-reset">Reset All</button>
+   </div>
+
+</body>
+</html>
